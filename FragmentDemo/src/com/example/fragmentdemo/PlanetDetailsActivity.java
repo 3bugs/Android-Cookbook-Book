@@ -6,25 +6,20 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.fragmentdemo.PlanetListFragment.OnPlanetListSelectedListener;
+public class PlanetDetailsActivity extends Activity {
 
-public class MainActivity extends Activity implements OnPlanetListSelectedListener {
-
+    protected static final String PLANET_TITLE = "planet_title";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    public void onPlanetListSelected(int position) {
-        String planetTitle = PlanetListFragment.mPlanetTitles[position];
+        setContentView(R.layout.activity_planet_details);
         
-        if (findViewById(R.id.details_fragment_container) == null) {
-            Intent intent = new Intent(this, PlanetDetailsActivity.class);
-            intent.putExtra(PlanetDetailsActivity.PLANET_TITLE, planetTitle);
-            startActivity(intent);
-        } else {
+        Intent intent = getIntent();
+        String planetTitle = intent.getStringExtra(PLANET_TITLE);
+        setTitle(planetTitle);
+        
+        if (savedInstanceState == null) {
             PlanetDetailsFragment fragment = PlanetDetailsFragment.newInstance(planetTitle);
             
             FragmentManager fm = getFragmentManager();

@@ -1,11 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/list_fragment"
-        android:name="com.example.fragmentdemo.PlanetListFragment"
+    <FrameLayout
+        android:id="@+id/details_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
