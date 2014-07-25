@@ -9,15 +9,17 @@ import android.widget.ListView;
 
 public class PlanetListFragment extends ListFragment {
 
-    protected static final String[] mPlanetTitles = new String[] { "Mercury", "Venus", "Earth", "Mars", "Jupiter",
-            "Saturn", "Uranus", "Neptune" };
+    // ชื่อดาวเคราะห์ทั้งหมดในระบบสุริยะ
+    protected static final String[] mPlanetTitles = new String[] { "Mercury",
+            "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_activated_1,
-                mPlanetTitles);
+        // สร้าง adapter และกำหนด adapter ให้กับ ListView ของแฟรกเมนต์
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_activated_1, mPlanetTitles);
         setListAdapter(adapter);
     }
 
@@ -25,6 +27,7 @@ public class PlanetListFragment extends ListFragment {
     public void onStart() {
         super.onStart();
 
+        // ให้แสดงสถานะการเลือกใน ListView กรณีเป็น layout สำหรับจอใหญ่
         if (getActivity().findViewById(R.id.details_fragment_container) != null) {
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         }
@@ -43,7 +46,8 @@ public class PlanetListFragment extends ListFragment {
         try {
             mCallback = (OnPlanetListSelectedListener) activity;
         } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString() + " must implement OnPlanetListSelectedListener");
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnPlanetListSelectedListener");
         }
     }
 
