@@ -54,9 +54,9 @@ public class MainActivity extends Activity {
         ft.replace(R.id.fragment_container, fragment);
         // กำหนดแอนิเมชั่นในการแสดงแฟรกเมนต์ใหม่
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        /* 
-         * จดจำการดำเนินการเกี่ยวกับแฟรกเมนต์ (จำว่าเดิมมีแฟรกเมนต์อะไรอยู่
-         * และเพิ่มแฟรกเมนต์อะไรลงไปใหม่ เป็นต้น)
+        /*
+         * บันทึกการดำเนินการเกี่ยวกับแฟรกเมนต์ลงใน back stack
+         * เพื่อให้สามารถใช้ปุ่ม Back ย้อนกลับไปยังแฟรกเมนต์ก่อนหน้าได้
          */
         ft.addToBackStack(null);
         ft.commit();
