@@ -16,23 +16,6 @@ public class MainActivity extends Activity {
     PlanetPagerAdapter mAdapter; // pager adapter
     ViewPager mViewPager;
 
-    // ออบเจ็ค OnPageChangeListener สำหรับระบุโค้ดการทำงานเมื่อมีการเปลี่ยนเพจใน ViewPager
-    ViewPager.OnPageChangeListener mPageChangeListener = new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageSelected(int position) {
-            setTitle(mAdapter.getPageTitle(position));
-        }
-
-        @Override
-        public void onPageScrolled(int position, float positionOffset,
-                int positionOffsetPixels) {
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int state) {
-        }
-    };
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -45,10 +28,27 @@ public class MainActivity extends Activity {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mAdapter);
 
+        // ออบเจ็ค OnPageChangeListener สำหรับระบุโค้ดการทำงานเมื่อมีการเปลี่ยนเพจใน ViewPager
+        ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                setTitle(mAdapter.getPageTitle(position));
+            }
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset,
+                    int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        };
+
         // กำหนดออบเจ็ค OnPageChangeListener ให้กับ ViewPager
-        mViewPager.setOnPageChangeListener(mPageChangeListener);
+        mViewPager.setOnPageChangeListener(pageChangeListener);
         // แสดงชื่อดาวเคราะห์แรกบน title bar ในตอนเริ่มต้น
-        mPageChangeListener.onPageSelected(0);
+        pageChangeListener.onPageSelected(0);
     }
 
     public class PlanetPagerAdapter extends FragmentStatePagerAdapter {
