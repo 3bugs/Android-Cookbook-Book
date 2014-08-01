@@ -51,6 +51,7 @@ public class MainActivity extends Activity {
         pageChangeListener.onPageSelected(0);
     }
 
+    // pager adapter ซึ่งจะส่งอินสแทนซ์ของ PlanetDetailsFragment ไปให้ ViewPager 
     public class PlanetPagerAdapter extends FragmentStatePagerAdapter {
         public PlanetPagerAdapter(FragmentManager fm) {
             super(fm);
