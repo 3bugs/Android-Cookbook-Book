@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <Button
+        android:id="@+id/display_second_activity_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display Second Activity" />
+
+    <Button
+        android:id="@+id/send_data_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Data to Second Activity" />
+
+    <Button
+        android:id="@+id/send_object_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Object to Second Activity" />
+
+    <Button
+        android:id="@+id/send_multiple_objects_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Multiple Objects \n(Using ArrayList)" />
+
+</LinearLayout>

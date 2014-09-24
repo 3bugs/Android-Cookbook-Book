@@ -1,0 +1,20 @@
+<resources>
+
+    <string-array name="color_names">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Pink</item>
+    </string-array>
+    <string-array name="color_values">
+        <item>RED</item>
+        <item>GRN</item>
+        <item>BLU</item>
+        <item>YLW</item>
+        <item>ORG</item>
+        <item>PNK</item>
+    </string-array>
+
+</resources>

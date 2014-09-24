@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/chiangmai_menu"
+        android:showAsAction="never"
+        android:title="Chiangmai"/>
+    <item
+        android:id="@+id/phuket_menu"
+        android:showAsAction="never"
+        android:title="Phuket"/>
+    <item
+        android:id="@+id/chonburi_menu"
+        android:showAsAction="never"
+        android:title="Chonburi"/>
+    <item
+        android:id="@+id/kasetsart_menu"
+        android:showAsAction="never"
+        android:title="Kasetsart University"/>
+</menu>

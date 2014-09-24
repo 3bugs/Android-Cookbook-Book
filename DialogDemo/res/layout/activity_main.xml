@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <Button
+        android:id="@+id/show_dialog_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Dialog" />
+
+    <Button
+        android:id="@+id/show_single_choice_list_dialog_1_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Single-Choice List Dialog (1)" />
+
+    <Button
+        android:id="@+id/show_single_choice_list_dialog_2_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Single-Choice List Dialog (2)" />
+
+    <Button
+        android:id="@+id/show_multiple_choice_list_dialog_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Multiple-Choice List Dialog" />
+    
+    <Button
+        android:id="@+id/show_custom_dialog_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Custom Dialog" />
+    
+    <Button
+        android:id="@+id/show_custom_dialog_validate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Custom Dialog and Validate Input" />
+
+</LinearLayout>

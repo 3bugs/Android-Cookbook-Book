@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MapDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="chonburi_title">ชลบุรี</string>
+    <string name="chonburi_snippet">อำเภอเมือง จังหวัดชลบุรี</string>
+    <string name="bangsaen_title">บางแสน</string>
+    <string name="bangsaen_snippet">ตำบลแสนสุข อำเภอเมือง จังหวัดชลบุรี</string>
+    <string name="kk_zoo_title">สวนสัตว์เปิดเขาเขียว</string>
+    <string name="kk_zoo_snippet">เปิด 8.00-18.00 น., โทร. 038-318-444</string>
+    <string name="tg_zoo_title">สวนเสือศรีราชา</string>
+    <string name="tg_zoo_snippet">เปิด 8.00-18.00 น., โทร. 038-296-556</string>
+
+	<string name="line_begin">ประตูฝั่งถนนวิภาวดี</string>
+	<string name="line_end">อาคารสารนิเทศ 50 ปี</string>
+</resources>
